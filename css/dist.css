@@ -1,0 +1,95 @@
+.charcoal-tc {
+  color: #264653 !important;
+}
+
+.persian-green-tc {
+  color: #2A9D8F !important;
+}
+
+.orange-yellow-crayola-tc {
+  color: #E9C46A !important;
+}
+
+.sandy-brown-tc {
+  color: #F4A261 !important;
+}
+
+.burnt-sienna-tc {
+  color: #E76F51 !important;
+}
+
+.black-tc {
+  color: black !important;
+}
+
+.white-tc {
+  color: white !important;
+}
+
+.charcoal-bc {
+  background-color: #264653 !important;
+}
+
+.persian-green-bc {
+  background-color: #2A9D8F !important;
+}
+
+.orange-yellow-crayola-bc {
+  background-color: #E9C46A !important;
+}
+
+.sandy-brown-bc {
+  background-color: #F4A261 !important;
+}
+
+.burnt-sienna-bc {
+  background-color: #E76F51 !important;
+}
+
+.black-bc {
+  background-color: black !important;
+}
+
+.white-bc {
+  background-color: white !important;
+}
+
+.bold-text {
+  font-weight: bold !important;
+}
+
+.italic-text {
+  font-style: italic !important;
+}
+
+.underline-text {
+  text-decoration: underline !important;
+}
+
+.uppercase-text {
+  text-transform: uppercase !important;
+}
+
+.capitalize-text {
+  text-transform: capitalize !important;
+}
+
+.text-al-center {
+  text-align: center !important;
+}
+
+.text-al-right {
+  text-align: right !important;
+}
+
+.text-al-left {
+  text-align: left !important;
+}
+
+.tag {
+  font-size: 0.65em;
+  padding: 0.35em;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5em;
+}
+/*# sourceMappingURL=dist.css.map */
