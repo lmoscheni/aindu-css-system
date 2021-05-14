@@ -75,6 +75,13 @@
   text-transform: capitalize !important;
 }
 
+.ellipsis-text {
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
 .text-al-center {
   text-align: center !important;
 }
@@ -92,6 +99,14 @@
   padding: 0.35em;
   border: 1px solid #d1d1d1;
   border-radius: 0.5em;
+}
+
+.grid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
 }
 
 html,

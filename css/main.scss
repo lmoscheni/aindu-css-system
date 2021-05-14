@@ -5,6 +5,7 @@
 @import "./bc-colors";
 @import "./text";
 @import "./tag";
+@import "./grid";
 
 html,
 body {
@@ -68,4 +69,12 @@ body {
 
   border: 1px solid rgb(209, 209, 209);
   border-radius: 0.5em;
+}
+
+.box {
+  border: 1px solid $orange-yellow-crayola-tc;
+
+  & .item {
+    width: 40px;
+  }
 }
