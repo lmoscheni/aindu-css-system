@@ -1,4 +1,4 @@
-# coolors-first-css-system
+# aindu-css-system
 
 This is an example of a CSS System to use on web app.
 
