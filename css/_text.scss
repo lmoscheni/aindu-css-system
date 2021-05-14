@@ -1,38 +1,43 @@
 .bold-text {
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 .italic-text {
-  font-style: italic !important;
+  font-style: italic;
 }
 
 .underline-text {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 .uppercase-text {
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 }
 
 .capitalize-text {
-  text-transform: capitalize !important;
+  text-transform: capitalize;
 }
 
 .ellipsis-text {
-  white-space: nowrap !important;
-  text-overflow: ellipsis !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .text-al-center {
-  text-align: center !important;
+  text-align: center;
 }
 
 .text-al-right {
-  text-align: right !important;
+  text-align: right;
 }
 
 .text-al-left {
-  text-align: left !important;
+  text-align: left;
+}
+
+.text-al-vertical {
+  display: table-cell;
+  vertical-align: middle;
 }

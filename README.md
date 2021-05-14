@@ -6,4 +6,4 @@ This repo contains GH Page of the project and the code to use this design system
 
 This system is builded with Sass and thinked as tools for frontend devs.
 
-Find the docs on the [page](https://lmoscheni.github.io/coolors-first-css-system).
+Find the docs on the [page](https://lmoscheni.github.io/aindu-css-system).

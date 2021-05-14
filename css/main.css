@@ -1,49 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-.charcoal-tc {
-  color: #264653 !important;
+.fst-tc {
+  color: #264653;
 }
 
-.persian-green-tc {
-  color: #2A9D8F !important;
+.snd-tc {
+  color: #2A9D8F;
 }
 
-.orange-yellow-crayola-tc {
-  color: #E9C46A !important;
+.trd-tc {
+  color: #E9C46A;
 }
 
-.sandy-brown-tc {
-  color: #F4A261 !important;
+.fth-tc {
+  color: #F4A261;
 }
 
-.burnt-sienna-tc {
-  color: #E76F51 !important;
+.fifth-tc {
+  color: #E76F51;
 }
 
 .black-tc {
-  color: black !important;
+  color: black;
 }
 
 .white-tc {
-  color: white !important;
+  color: white;
 }
 
-.charcoal-bc {
+.fst-bc {
   background-color: #264653 !important;
 }
 
-.persian-green-bc {
+.snd-bc {
   background-color: #2A9D8F !important;
 }
 
-.orange-yellow-crayola-bc {
+.trd-bc {
   background-color: #E9C46A !important;
 }
 
-.sandy-brown-bc {
+.fth-bc {
   background-color: #F4A261 !important;
 }
 
-.burnt-sienna-bc {
+.fifth-bc {
   background-color: #E76F51 !important;
 }
 
@@ -56,42 +56,47 @@
 }
 
 .bold-text {
-  font-weight: bold !important;
+  font-weight: bold;
 }
 
 .italic-text {
-  font-style: italic !important;
+  font-style: italic;
 }
 
 .underline-text {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 .uppercase-text {
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 }
 
 .capitalize-text {
-  text-transform: capitalize !important;
+  text-transform: capitalize;
 }
 
 .ellipsis-text {
-  white-space: nowrap !important;
-  text-overflow: ellipsis !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .text-al-center {
-  text-align: center !important;
+  text-align: center;
 }
 
 .text-al-right {
-  text-align: right !important;
+  text-align: right;
 }
 
 .text-al-left {
-  text-align: left !important;
+  text-align: left;
+}
+
+.text-al-vertical {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .tag {
@@ -101,12 +106,73 @@
   border-radius: 0.5em;
 }
 
-.grid {
-  width: 100%;
+.row {
+  max-width: 1200px;
+  padding: 0;
+  margin: .5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row.--no-gutter {
+  gap: 0;
+}
+
+.row.--no-margin {
+  margin: 0;
+}
+
+.col-1 {
+  grid-column: span 1;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-5 {
+  grid-column: span 5;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-7 {
+  grid-column: span 7;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-10 {
+  grid-column: span 10;
+}
+
+.col-11 {
+  grid-column: span 11;
+}
+
+.col-12 {
+  grid-column: span 12;
 }
 
 html,
@@ -135,58 +201,36 @@ body {
 }
 
 .app-container h1,
-.app-container h2, .app-container h3 {
+.app-container h2,
+.app-container h3 {
   width: 100%;
 }
 
 .app-container section {
   width: 100%;
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.color-display-container {
-  width: 300px;
-  margin: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .color-display-container div {
-  width: 270px;
-  height: 50px;
-  margin: 1em;
-  padding: 0.7em;
+  margin: 1rem 0;
+  padding: 0.5rem;
   border: 1px solid #d1d1d1;
   border-radius: 0.5em;
-  font-weight: bold;
-  text-align: center;
 }
 
 .text-container {
-  width: 270px;
-  margin: 1em;
-  padding: 1.5em;
+  padding: 1.5rem;
   border: 1px solid #d1d1d1;
   border-radius: 0.5em;
+}
+
+.box {
+  width: 100%;
+}
+
+.box.item {
+  padding: 1rem 0;
+  border: 1px solid #264653;
+  background-color: #E76F51;
 }
 /*# sourceMappingURL=main.css.map */

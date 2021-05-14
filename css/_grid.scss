@@ -1,0 +1,27 @@
+$columns: 12; // Number of columns in the grid system
+
+.row {
+  max-width: 1200px;
+  padding: 0;
+  margin: .5rem;
+
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: 1rem;
+  box-sizing: border-box;
+
+  &.--no-gutter {
+    gap: 0;
+  }
+
+  &.--no-margin {
+    margin: 0;
+  }
+}
+
+
+@for $width from 1 through $columns {
+  .col-#{$width} {
+    grid-column: span $width;
+  }
+}
