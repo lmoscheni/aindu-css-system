@@ -107,72 +107,199 @@
 }
 
 .row {
-  max-width: 1200px;
-  padding: 0;
-  margin: .5rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+  margin: 12px -12px;
+}
+
+.row:after, .row:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 1px) {
+  .row .-sm-1 {
+    width: 8.33333%;
+  }
+  .row .-sm-2 {
+    width: 16.66667%;
+  }
+  .row .-sm-3 {
+    width: 25%;
+  }
+  .row .-sm-4 {
+    width: 33.33333%;
+  }
+  .row .-sm-5 {
+    width: 41.66667%;
+  }
+  .row .-sm-6 {
+    width: 50%;
+  }
+  .row .-sm-7 {
+    width: 58.33333%;
+  }
+  .row .-sm-8 {
+    width: 66.66667%;
+  }
+  .row .-sm-9 {
+    width: 75%;
+  }
+  .row .-sm-10 {
+    width: 83.33333%;
+  }
+  .row .-sm-11 {
+    width: 91.66667%;
+  }
+  .row .-sm-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .row .-md-1 {
+    width: 8.33333%;
+  }
+  .row .-md-2 {
+    width: 16.66667%;
+  }
+  .row .-md-3 {
+    width: 25%;
+  }
+  .row .-md-4 {
+    width: 33.33333%;
+  }
+  .row .-md-5 {
+    width: 41.66667%;
+  }
+  .row .-md-6 {
+    width: 50%;
+  }
+  .row .-md-7 {
+    width: 58.33333%;
+  }
+  .row .-md-8 {
+    width: 66.66667%;
+  }
+  .row .-md-9 {
+    width: 75%;
+  }
+  .row .-md-10 {
+    width: 83.33333%;
+  }
+  .row .-md-11 {
+    width: 91.66667%;
+  }
+  .row .-md-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .row .-lg-1 {
+    width: 8.33333%;
+  }
+  .row .-lg-2 {
+    width: 16.66667%;
+  }
+  .row .-lg-3 {
+    width: 25%;
+  }
+  .row .-lg-4 {
+    width: 33.33333%;
+  }
+  .row .-lg-5 {
+    width: 41.66667%;
+  }
+  .row .-lg-6 {
+    width: 50%;
+  }
+  .row .-lg-7 {
+    width: 58.33333%;
+  }
+  .row .-lg-8 {
+    width: 66.66667%;
+  }
+  .row .-lg-9 {
+    width: 75%;
+  }
+  .row .-lg-10 {
+    width: 83.33333%;
+  }
+  .row .-lg-11 {
+    width: 91.66667%;
+  }
+  .row .-lg-12 {
+    width: 100%;
+  }
+}
+
+.row .col {
+  display: block;
+  float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 1px;
+  padding: 0 12px;
+  margin: 6px 0;
 }
 
-.row.--no-gutter {
-  gap: 0;
+.row.-no-gutter {
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.row.--no-margin {
-  margin: 0;
+.row.-no-gutter > .col {
+  padding: 0;
 }
 
-.col-1 {
-  grid-column: span 1;
+.row.-no-margin {
+  margin: 0 -12px;
 }
 
-.col-2 {
-  grid-column: span 2;
+@media (min-width: 1px) and (max-width: 767px) {
+  .row .col {
+    padding: 0 8px;
+  }
+  .row {
+    margin: 0 -8px;
+  }
+  .row.-no-gutter-sm {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .row.-no-gutter-sm > .col {
+    padding: 0;
+  }
 }
 
-.col-3 {
-  grid-column: span 3;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .row.-no-gutter-md {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .row.-no-gutter-md > .col {
+    padding: 0;
+  }
 }
 
-.col-4 {
-  grid-column: span 4;
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .row.-no-gutter-lg {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .row.-no-gutter-lg > .col {
+    padding: 0;
+  }
 }
 
-.col-5 {
-  grid-column: span 5;
-}
-
-.col-6 {
-  grid-column: span 6;
-}
-
-.col-7 {
-  grid-column: span 7;
-}
-
-.col-8 {
-  grid-column: span 8;
-}
-
-.col-9 {
-  grid-column: span 9;
-}
-
-.col-10 {
-  grid-column: span 10;
-}
-
-.col-11 {
-  grid-column: span 11;
-}
-
-.col-12 {
-  grid-column: span 12;
+@media (min-width: 1024px) {
+  .row.-no-gutter-lg {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .row.-no-gutter-lg > .col {
+    padding: 0;
+  }
 }
 
 html,
@@ -184,8 +311,14 @@ body {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    margin: 1rem 1.5rem !important;
+  }
+}
+
 .app-container {
-  width: 100%;
+  margin: 2rem 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,18 +351,15 @@ body {
   border-radius: 0.5em;
 }
 
-.text-container {
-  padding: 1.5rem;
+.text-container div {
+  margin: 1rem 0;
+  padding: 0.5rem;
   border: 1px solid #d1d1d1;
   border-radius: 0.5em;
 }
 
 .box {
-  width: 100%;
-}
-
-.box.item {
-  padding: 1rem 0;
+  padding: .5rem;
   border: 1px solid #264653;
   background-color: #E76F51;
 }

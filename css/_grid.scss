@@ -1,27 +1,88 @@
-$columns: 12; // Number of columns in the grid system
+@import "./mixins/breakpoints";
+@import "./mixins/clearfix";
+@import "./spacing";
 
-.row {
-  max-width: 1200px;
-  padding: 0;
-  margin: .5rem;
+@mixin responsive-grid-by-size($size, $min) {
+  $columns: 12;
+  $cell-size: 100% / $columns;
 
-  display: grid;
-  grid-template-columns: repeat($columns, 1fr);
-  gap: 1rem;
-  box-sizing: border-box;
-
-  &.--no-gutter {
-    gap: 0;
-  }
-
-  &.--no-margin {
-    margin: 0;
+  @media (min-width: $min) {
+    @for $i from 1 through $columns {
+      .-#{$size}-#{$i} {
+        width: $cell-size * $i;
+      }
+    }
   }
 }
 
+.row {
+  @include clearfix;
+  @include responsive-grid-by-size("sm", $sm-size);
+  @include responsive-grid-by-size("md", $md-size);
+  @include responsive-grid-by-size("lg", $lg-size);
 
-@for $width from 1 through $columns {
-  .col-#{$width} {
-    grid-column: span $width;
+  margin: $spacing-3 $negative-spacing-3;
+
+  .col {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    min-height: 1px;
+    padding: 0 $spacing-3;
+    margin: ($spacing-3 / 2) 0;
+  }
+  // No-gutter
+  &.-no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col {
+      padding: 0;
+    }
+  }
+
+  &.-no-margin {
+    margin: 0 $negative-spacing-3;
+  }
+}
+
+@include breakpoint("small", "exact") {
+  .row .col {
+    padding: 0 $spacing-2;
+  }
+
+  .row {
+    margin: 0 $negative-spacing-2;
+
+    &.-no-gutter-sm {
+      margin-right: 0;
+      margin-left: 0;
+
+      > .col {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint("medium", "exact") {
+  .row.-no-gutter-md {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col {
+      padding: 0;
+    }
+  }
+}
+
+@include breakpoint("large", "up") {
+  .row.-no-gutter-lg {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col {
+      padding: 0;
+    }
   }
 }

@@ -16,8 +16,14 @@ body {
   scroll-behavior: smooth;
 }
 
+@media (max-width: $md-size) {
+  .app-container {
+    margin: 1rem 1.5rem !important;
+  }
+}
+
 .app-container {
-  width: 100%;
+  margin: 2rem 7rem;
 
   display: flex;
   flex-direction: row;
@@ -47,17 +53,17 @@ body {
 }
 
 .text-container {
-  padding: 1.5rem;
+  div {
+    margin: 1rem 0;
+    padding: 0.5rem;
 
-  border: 1px solid rgb(209, 209, 209);
-  border-radius: 0.5em;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 0.5em;
+  }
 }
 
 .box {
-  width: 100%;
-  &.item {
-    padding: 1rem 0;
-    border: 1px solid $fst-color;
-    background-color: $fifth-color;
-  }
+  padding: .5rem;
+  border: 1px solid $fst-color;
+  background-color: $fifth-color;
 }
