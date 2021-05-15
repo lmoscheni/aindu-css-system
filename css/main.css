@@ -23,31 +23,31 @@
   color: black;
 }
 
-.white-tc {
+.white-tc, .button.fst, .button.snd, .button.trd, .button.fth, .button.fifth, .button.black {
   color: white;
 }
 
-.fst-bc {
+.fst-bc, .button.fst {
   background-color: #264653 !important;
 }
 
-.snd-bc {
+.snd-bc, .button.snd {
   background-color: #2A9D8F !important;
 }
 
-.trd-bc {
+.trd-bc, .button.trd {
   background-color: #E9C46A !important;
 }
 
-.fth-bc {
+.fth-bc, .button.fth {
   background-color: #F4A261 !important;
 }
 
-.fifth-bc {
+.fifth-bc, .button.fifth {
   background-color: #E76F51 !important;
 }
 
-.black-bc {
+.black-bc, .button.black {
   background-color: black !important;
 }
 
@@ -55,7 +55,7 @@
   background-color: white !important;
 }
 
-.bold-text {
+.bold-text, .button {
   font-weight: bold;
 }
 
@@ -67,7 +67,7 @@
   text-decoration: underline;
 }
 
-.uppercase-text {
+.uppercase-text, .button {
   text-transform: uppercase;
 }
 
@@ -82,7 +82,7 @@
   white-space: nowrap;
 }
 
-.text-al-center {
+.text-al-center, .button {
   text-align: center;
 }
 
@@ -300,6 +300,33 @@
   .row.-no-gutter-lg > .col {
     padding: 0;
   }
+}
+
+.button {
+  width: auto;
+  font-family: inherit;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.button.-sm {
+  font-size: 0.7rem;
+  padding: 0.7rem;
+}
+
+.button.-md {
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+.button.-lg {
+  padding: 1.2rem;
+}
+
+.button:hover {
+  -webkit-filter: invert(0.15);
+          filter: invert(0.15);
 }
 
 html,
