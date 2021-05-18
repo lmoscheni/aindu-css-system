@@ -12,49 +12,8 @@
   @extend .bold-text;
   @extend .text-al-center;
 
-  &.fst {
-    @extend .fst-bc;
-    @extend .white-tc;
-  }
-
-  &.snd {
-    @extend .snd-bc;
-    @extend .white-tc;
-  }
-
-  &.trd {
-    @extend .trd-bc;
-    @extend .white-tc;
-  }
-
-  &.fth {
-    @extend .fth-bc;
-    @extend .white-tc;
-  }
-
-  &.fifth {
-    @extend .fifth-bc;
-    @extend .white-tc;
-  }
-
-  &.black {
-    @extend .black-bc;
-    @extend .white-tc;
-  }
-
-  &.-sm {
-    font-size: 0.7rem;
-    padding: 0.7rem;
-  }
-
-  &.-md {
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-
-  &.-lg {
-    padding: 1.2rem;
-  }
+  @extend .color-base-properties;
+  @extend .size-base-properties;
 
   &:hover {
     filter: invert(.15); 

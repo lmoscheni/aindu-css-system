@@ -23,31 +23,31 @@
   color: black;
 }
 
-.white-tc, .button.fst, .button.snd, .button.trd, .button.fth, .button.fifth, .button.black {
+.white-tc, .color-base-properties.fst, .fst.button, .color-base-properties.snd, .snd.button, .color-base-properties.trd, .trd.button, .color-base-properties.fth, .fth.button, .color-base-properties.fifth, .fifth.button, .color-base-properties.black, .black.button {
   color: white;
 }
 
-.fst-bc, .button.fst {
+.fst-bc, .color-base-properties.fst, .fst.button {
   background-color: #264653 !important;
 }
 
-.snd-bc, .button.snd {
+.snd-bc, .color-base-properties.snd, .snd.button {
   background-color: #2A9D8F !important;
 }
 
-.trd-bc, .button.trd {
+.trd-bc, .color-base-properties.trd, .trd.button {
   background-color: #E9C46A !important;
 }
 
-.fth-bc, .button.fth {
+.fth-bc, .color-base-properties.fth, .fth.button {
   background-color: #F4A261 !important;
 }
 
-.fifth-bc, .button.fifth {
+.fifth-bc, .color-base-properties.fifth, .fifth.button {
   background-color: #E76F51 !important;
 }
 
-.black-bc, .button.black {
+.black-bc, .color-base-properties.black, .black.button {
   background-color: black !important;
 }
 
@@ -302,6 +302,21 @@
   }
 }
 
+.size-base-properties.-sm, .-sm.button {
+  font-size: 0.7rem;
+  padding: 0.7rem;
+}
+
+.size-base-properties.-md, .-md.button {
+  font-size: 0.8rem;
+  padding: 0.8rem;
+}
+
+.size-base-properties.-lg, .-lg.button {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
 .button {
   width: auto;
   font-family: inherit;
@@ -310,23 +325,118 @@
   cursor: pointer;
 }
 
-.button.-sm {
-  font-size: 0.7rem;
-  padding: 0.7rem;
-}
-
-.button.-md {
-  font-size: 0.8rem;
-  padding: 1rem;
-}
-
-.button.-lg {
-  padding: 1.2rem;
-}
-
 .button:hover {
   -webkit-filter: invert(0.15);
           filter: invert(0.15);
+}
+
+.form-group {
+  margin-bottom: 1em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form-group .form-label {
+  font-size: 1em;
+  color: #ccc;
+  display: block;
+  opacity: 1;
+  -webkit-transform: translate(0.5em, -1.5em);
+          transform: translate(0.5em, -1.5em);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form-group .form-control {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5em;
+  width: 100%;
+  padding: 0.5em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form-group .form-control::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-group .form-control:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-group .form-control::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-group .form-control::placeholder {
+  color: transparent;
+}
+
+.form-group .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border-color: black;
+}
+
+.form-group .form-control:focus + .form-label {
+  -webkit-transform: translateY(-3em) scale(0.8);
+          transform: translateY(-3em) scale(0.8);
+  color: black;
+}
+
+.form-group .form-control:focus-within {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.form-group .form-control:not + .form-label {
+  -webkit-transform: translateY(-2.5em) scale(0.8);
+          transform: translateY(-2.5em) scale(0.8);
+}
+
+.form-group.fst .form-control:focus {
+  border-color: #264653;
+}
+
+.form-group.fst .form-control:focus + .form-label {
+  color: #264653;
+}
+
+.form-group.snd .form-control:focus {
+  border-color: #2A9D8F;
+}
+
+.form-group.snd .form-control:focus + .form-label {
+  color: #2A9D8F;
+}
+
+.form-group.trd .form-control:focus {
+  border-color: #E9C46A;
+}
+
+.form-group.trd .form-control:focus + .form-label {
+  color: #E9C46A;
+}
+
+.form-group.fth .form-control:focus {
+  border-color: #F4A261;
+}
+
+.form-group.fth .form-control:focus + .form-label {
+  color: #F4A261;
+}
+
+.form-group.fifth .form-control:focus {
+  border-color: #E76F51;
+}
+
+.form-group.fifth .form-control:focus + .form-label {
+  color: #E76F51;
 }
 
 html,

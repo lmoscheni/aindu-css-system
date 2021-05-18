@@ -1,0 +1,31 @@
+.color-base-properties {
+  &.fst {
+    @extend .fst-bc;
+    @extend .white-tc;
+  }
+
+  &.snd {
+    @extend .snd-bc;
+    @extend .white-tc;
+  }
+
+  &.trd {
+    @extend .trd-bc;
+    @extend .white-tc;
+  }
+
+  &.fth {
+    @extend .fth-bc;
+    @extend .white-tc;
+  }
+
+  &.fifth {
+    @extend .fifth-bc;
+    @extend .white-tc;
+  }
+
+  &.black {
+    @extend .black-bc;
+    @extend .white-tc;
+  }
+}
