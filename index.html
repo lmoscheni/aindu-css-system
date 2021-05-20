@@ -264,81 +264,241 @@
       <section>
         <h2>Form</h2>
         <p>
-          I define a wrapper class for form items
-          <span class="tag">form-group</span> and some classes for the child. I
-          use the classes <span class="tag">form-control</span> and
-          <span class="tag">form-label</span> to have floating labels on form
-          items.
+          I define a wrapper class for form items (label, textarea & input), if
+          you use any of the tag included wrapped into a div with the class
+          <span class="tag">form-group</span> you have available the form
+          styles.
         </p>
-        <h3>input</h3>
+        <h3>Input</h3>
+        <h4>Sizes</h4>
         <div class="row">
-          <div class="col -sm-3 -md-3 -lg-2">
-            <div class="form-group">
+          <div class="col -sm-4 -md-4 -lg-3">
+            <div class="form-group -sm">
               <input
-                class="form-control"
-                name="input1"
-                id="input1"
+                name="inputS1"
+                id="inputS1"
                 type="text"
+                pattern="\S+.*"
+                required
               />
-              <label class="form-label" for="input1">label</label>
+              <label for="inputS1">label</label>
             </div>
           </div>
-          <div class="col -sm-3 -md-3 -lg-2">
-            <div class="form-group fst">
+          <div class="col -sm-4 -md-4 -lg-3">
+            <div class="form-group -md">
               <input
-                class="form-control"
-                name="input2"
-                id="input2"
+                name="inputS2"
+                id="inputS2"
                 type="text"
+                pattern="\S+.*"
+                required
               />
-              <label class="form-label" for="input2">label</label>
+              <label for="inputS2">label</label>
             </div>
           </div>
-          <div class="col -sm-3 -md-3 -lg-2">
-            <div class="form-group snd">
+          <div class="col -sm-4 -md-4 -lg-3">
+            <div class="form-group -lg">
               <input
-                class="form-control"
-                name="input3"
-                id="input3"
+                name="inputS3"
+                id="inputS3"
                 type="text"
+                pattern="\S+.*"
+                required
               />
-              <label class="form-label" for="input3">label</label>
-            </div>
-          </div>
-          <div class="col -sm-3 -md-3 -lg-2">
-            <div class="form-group trd">
-              <input
-                class="form-control"
-                name="input4"
-                id="input4"
-                type="text"
-              />
-              <label class="form-label" for="input4">label</label>
-            </div>
-          </div>
-          <div class="col -sm-3 -md-3 -lg-2">
-            <div class="form-group fth">
-              <input
-                class="form-control"
-                name="input5"
-                id="input5"
-                type="text"
-              />
-              <label class="form-label" for="input5">label</label>
-            </div>
-          </div>
-          <div class="col -sm-3 -md-3 -lg-2">
-            <div class="form-group fifth">
-              <input
-                class="form-control"
-                name="input6"
-                id="input6"
-                type="text"
-              />
-              <label class="form-label" for="input6">label</label>
+              <label for="inputS3">label</label>
             </div>
           </div>
         </div>
+        <h4>Colors</h4>
+        <div class="row">
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm">
+              <input
+                name="input1"
+                id="input1"
+                type="text"
+                pattern="\S+.*"
+                required
+              />
+              <label for="input1">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm fst">
+              <input
+                name="input2"
+                id="input2"
+                type="text"
+                pattern="\S+.*"
+                required
+              />
+              <label for="input2">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm snd">
+              <input
+                name="input3"
+                id="input3"
+                type="text"
+                pattern="\S+.*"
+                required
+              />
+              <label for="input3">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm trd">
+              <input
+                name="input4"
+                id="input4"
+                type="text"
+                pattern="\S+.*"
+                required
+              />
+              <label for="input4">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm fth">
+              <input
+                name="input5"
+                id="input5"
+                type="text"
+                pattern="\S+.*"
+                required
+              />
+              <label for="input5">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm fifth">
+              <input
+                name="input6"
+                id="input6"
+                type="text"
+                pattern="\S+.*"
+                required
+              />
+              <label for="input6">label</label>
+            </div>
+          </div>
+        </div>
+        <!-- <h3>Text Area</h3>
+        <h4>Sizes</h4>
+        <div class="row">
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm">
+              <textarea
+                name="textareaS1"
+                id="textareaS1"
+                rows="3"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textareaS1">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -md">
+              <textarea
+                name="textareaS2"
+                id="textareaS2"
+                rows="3"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textareaS2">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -lg">
+              <textarea
+                name="textareaS3"
+                id="textareaS3"
+                rows="3"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textareaS3">label</label>
+            </div>
+          </div>
+        </div>
+        <h4>Colors</h4>
+        <div class="row">
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group -sm">
+              <textarea
+                name="textarea1"
+                id="textarea1"
+                rows="5"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textarea1">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group fst -sm">
+              <textarea
+                name="textarea2"
+                id="textarea2"
+                rows="5"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textarea2">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group snd -sm">
+              <textarea
+                name="textarea3"
+                id="textarea3"
+                rows="5"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textarea3">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group trd -sm">
+              <textarea
+                name="textarea4"
+                id="textarea4"
+                rows="5"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textarea4">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group fth -sm">
+              <textarea
+                name="textarea5"
+                id="textarea5"
+                rows="5"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textarea5">label</label>
+            </div>
+          </div>
+          <div class="col -sm-3 -md-3 -lg-2">
+            <div class="form-group fifth -sm">
+              <textarea
+                name="textarea6"
+                id="textarea6"
+                rows="5"
+                pattern="\S+.*"
+                required
+              ></textarea>
+              <label for="textarea6">label</label>
+            </div>
+          </div>
+        </div> -->
       </section>
     </div>
   </body>

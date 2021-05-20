@@ -1,96 +1,64 @@
+@import "./mixins/floating-label";
+@import "./mixins/form-element-size";
+
 .form-group {
-  margin-bottom: 1em;
-  transition: all 0.3s;
+  position: relative;
+  margin-bottom: 2rem;
 
-  .form-label {
-    font-size: 1em;
-    color: #ccc;
-    display: block;
-    opacity: 1;
-    transform: translate(0.5em, -1.5em);
-    transform-origin: 0 0;
-    transition: all 0.3s;
-  }
+  // width: 100%;
+  // max-height: 100%;
 
-  .form-control {
+  input,
+  textarea {
+    width: 100%;
+    // height: auto;
+    // max-height: 100%;
+    // width: 100%;
+    position: absolute;
+    box-sizing: border-box;
     box-shadow: none;
+    outline: none;
     border: 1px solid rgb(209, 209, 209);
     border-radius: 0.5em;
-    width: 100%;
-    padding: 0.5em;
-    transition: all 0.5s;
+  }
 
-    &::placeholder {
-      color: transparent;
-    }
+  label {
+    position: absolute;
+    color: rgb(209, 209, 209);
+    transition: 1s;
+  }
 
-    &:focus {
-      box-shadow: none;
-      outline: none;
-      border-color: $black-color;
+  @include floatingLabel($black-color, "");
 
-      + .form-label {
-        transform: translateY(-3em) scale(0.8);
-        color: $black-color;
-      }
-    }
+  &.-sm {
+    @include formElementSize(0.7rem, 0.4rem, -1.3rem);
+  }
 
-    &:focus-within {
-      transform: scale(1.05, 1.05);
-    }
+  &.-md {
+    @include formElementSize(0.8rem, 0.5rem, -1.5rem);
+  }
 
-    &:not + .form-label {
-      transform: translateY(-2.5em) scale(0.8);
-    }
+  &.-lg {
+    @include formElementSize(0.9rem, 0.6rem, -1.7rem);
   }
 
   &.fst {
-    .form-control:focus {
-      border-color: $fst-color;
-
-      + .form-label {
-        color: $fst-color;
-      }
-    }
+    @include floatingLabel($fst-color, "");
   }
 
   &.snd {
-    .form-control:focus {
-      border-color: $snd-color;
-
-      + .form-label {
-        color: $snd-color;
-      }
-    }
+    @include floatingLabel($snd-color, "");
   }
 
   &.trd {
-    .form-control:focus {
-      border-color: $trd-color;
-
-      + .form-label {
-        color: $trd-color;
-      }
-    }
+    @include floatingLabel($trd-color, "");
   }
 
   &.fth {
-    .form-control:focus {
-      border-color: $fth-color;
-
-      + .form-label {
-        color: $fth-color;
-      }
-    }
+    @include floatingLabel($fth-color, "");
   }
 
   &.fifth {
-    .form-control:focus {
-      border-color: $fifth-color;
-
-      + .form-label {
-        color: $fifth-color;
-      }
-    }
+    @include floatingLabel($fifth-color, "");
   }
 }

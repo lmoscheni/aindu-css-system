@@ -1,0 +1,15 @@
+@mixin formElementSize($fontSize, $padding, $top) {
+  label,
+  input,
+  textarea {
+    font-size: $fontSize;
+    padding: $padding;
+  }
+
+  input:focus ~ label,
+  textarea:focus ~ label,
+  input:valid ~ label,
+  textarea:valid ~ label {
+    top: $top !important;
+  }
+}
