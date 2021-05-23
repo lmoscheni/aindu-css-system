@@ -1,22 +1,24 @@
 @mixin floatingLabel($color, $top) {
-  input:focus,
-  input:valid,
-  textarea:focus,
-  textarea:valid {
-    border-color: $color;
-  }
+  .form-group-item {
+    input:focus,
+    input:valid,
+    textarea:focus,
+    textarea:valid {
+      border-color: $color;
+    }
 
-  input:focus ~ label,
-  input:valid ~ label,
-  textarea:focus ~ label,
-  textarea:valid ~ label {
-    color: $color;
-    font-weight: bold;
+    input:focus ~ label,
+    input:valid ~ label,
+    textarea:focus ~ label,
+    textarea:valid ~ label {
+      color: $color;
+      font-weight: bold;
 
-    @if $top != "" {
-      top: $top;
-    } @else {
-      top: inherit;
+      @if $top != "" {
+        top: $top;
+      } @else {
+        top: inherit;
+      }
     }
   }
 }

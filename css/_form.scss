@@ -2,30 +2,34 @@
 @import "./mixins/form-element-size";
 
 .form-group {
-  position: relative;
+  display: inline-block;
+  width: 100%;
   margin-bottom: 2rem;
 
-  // width: 100%;
-  // max-height: 100%;
+  .form-group-item {
+    position: relative;
 
-  input,
-  textarea {
-    width: 100%;
-    // height: auto;
-    // max-height: 100%;
-    // width: 100%;
-    position: absolute;
-    box-sizing: border-box;
-    box-shadow: none;
-    outline: none;
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 0.5em;
-  }
+    input,
+    textarea {
+      width: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      box-shadow: none;
+      outline: none;
+      border: 1px solid rgb(209, 209, 209);
+      border-radius: 0.5em;
+    }
 
-  label {
-    position: absolute;
-    color: rgb(209, 209, 209);
-    transition: 1s;
+    label {
+      position: absolute;
+      color: rgb(209, 209, 209);
+      transition: 1s;
+    }
+
+    textarea {
+      overflow: hidden;
+      resize: both;
+    }
   }
 
   @include floatingLabel($black-color, "");
